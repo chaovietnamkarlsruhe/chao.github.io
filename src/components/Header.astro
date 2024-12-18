@@ -1,0 +1,21 @@
+---
+import HeaderIcon from './HeaderIcon.astro';
+// import Logo from "./Logo.astro";
+import Nav from "./Nav.astro";
+
+const { current = '' } = Astro.props;
+---
+<style>
+	header {
+		display: flex;
+		margin: 0 auto;
+		justify-content: flex-end;
+		width: 100%;
+		box-shadow: 0 4px 8px rgba(var(--black), 5%);
+	}
+</style>
+<header>
+	<!-- <Logo /> -->
+	<Nav current={current} />
+	<HeaderIcon /> 
+</header>
